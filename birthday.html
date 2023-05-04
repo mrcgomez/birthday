@@ -18,27 +18,30 @@
 </header>
 
 <div id="message"></div>
+<img id="birthday_image" src="">
+
 <script>
     let statement = document.getElementById("message");
-    let birthday_image = document.getElementById("birdthday_image");
+    let bd_image = document.getElementById("birdthday_image");
+
     // get the current date
     today = new Date();
     month = today.getMonth(); // get the month
     day = today.getDate();  // get the date
 
     // get the birthday
-    let bday = new Date(1977, 4, 4); // enter YOUR birthday
+    let bday = new Date(1977, 4, 3); // enter YOUR birthday
     let bd_month = bday.getMonth();
     let bd_day = bday.getDate();
 
     if (month == bd_month && day == bd_day ) {
         message = "Happy Birthday!"
-        bd_image.src = "imgs/happy-birthday.png"
-        confeti();
+        // bd_image.src = "imgs/happy-birthday.png"
+       // confeti();
 
     } else {
         message = "It's not your birthday, yet.";
-        bd_image.src = "panda_cry.jpeg"
+       // bd_image.src = "panda_cry.jpeg"
     }
 
     console.log(month)
