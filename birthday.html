@@ -7,6 +7,8 @@
 </head>
 
 
+<!-- Compairing Date Objects -->
+
 <body class="w3-container">
 
 <header class="w3-center">   
@@ -17,30 +19,33 @@
 
 <div id="message"></div>
 <script>
+    let statement = document.getElementById("message");
+    let birthday_image = document.getElementById("birdthday_image");
     // get the current date
     today = new Date();
     month = today.getMonth(); // get the month
     day = today.getDate();  // get the date
 
     // get the birthday
-    let bday = new Date(1977, 5, 27); // enter YOUR birthday
+    let bday = new Date(1977, 4, 4); // enter YOUR birthday
     let bd_month = bday.getMonth();
     let bd_day = bday.getDate();
 
     if (month == bd_month && day == bd_day ) {
         message = "Happy Birthday!"
-        console.log (message)
+        bd_image.src = "imgs/happy-birthday.png"
+        confeti();
 
     } else {
-
-        message = "It's not your birthday, yet."
-        console.log(message)
-
+        message = "It's not your birthday, yet.";
+        bd_image.src = "panda_cry.jpeg"
     }
 
-    statement.innerHTML = "<H2>" + message = "</h2>";
+    console.log(month)
+    // console.log(day);
+    console.log(message)
 
-
+    statement.innerHTML = "<h2>" + message + "</h2>";
 </script>
 
 
