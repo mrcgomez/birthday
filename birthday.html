@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+<title>Is it your B-Day</title>
+
+</head>
+
+
+<body class="w3-container">
+
+<header class="w3-center">   
+
+    <h1>Is it your birthday?</h1>
+
+</header>
+
+<div id="message"></div>
+<script>
+    // get the current date
+    today = new Date();
+    month = today.getMonth(); // get the month
+    day = today.getDate();  // get the date
+
+    // get the birthday
+    let bday = new Date(1977, 5, 27); // enter YOUR birthday
+    let bd_month = bday.getMonth();
+    let bd_day = bday.getDate();
+
+    if (month == bd_month && day == bd_day ) {
+        message = "Happy Birthday!"
+        console.log (message)
+
+    } else {
+
+        message = "It's not your birthday, yet."
+        console.log(message)
+
+    }
+
+    statement.innerHTML = "<H2>" + message = "</h2>";
+
+
+</script>
+
+
+<footer>
+
+
+</footer>
+
+
+</body>
+
+</html>
